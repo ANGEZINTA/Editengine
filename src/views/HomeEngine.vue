@@ -135,18 +135,18 @@
                             </tr>
                         </tbody>
                     </table> 
-                    <div class="btn btn-info mb-3"  style="background-color: #00CDD5; width:100px;"  >
+                    <div class="btn btn-info mb-3"  style="background-color: #00CDD5; width:100px;">
                         {{branches.label}}
                     </div>
                     <table class="table" v-if="showAuto">
-                        <thead>
+                        <thead>   
                             <tr>
                                 <th scope="col text-dark">Noms</th>
                                 <th scope="col text-dark">Descriptions</th>  
                                 <th scope="col text-dark">Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody> 
                             <tr v-for="(calcul, index) in methods" :key="index">
                                 <td>{{ calcul.name }}</td>
                                 <td>{{ calcul.description }}</td>
@@ -283,7 +283,9 @@
         
         
                 generateSlug() : any {
+
                     this.enginemethod.slug = this.slugify(this.enginemethod.name);
+
                     },
 
         
@@ -376,7 +378,7 @@
                         console.log('Méthode supprimée avec succès');
                         this.engineMethods(); // Rafraîchir les données après la suppression
                     } else {
-                        console.error('Erreur lors de la suppression côté serveur');
+                        console.error('Erreur lors de la suppression côté serveur');     
                     }
                 } 
         }
